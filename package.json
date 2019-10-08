@@ -4,19 +4,30 @@
   "description": "code challenge for employment application",
   "main": "main.js",
   "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "express": "^4.17.1",
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "sequelize": "^5.19.4",
-    "volleyball": "^1.5.1"
+    "volleyball": "^1.5.1",
+    "webpack": "^4.41.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "@babel/core": "^7.6.2",
+    "nodemon": "^1.19.3",
+    "react-router-dom": "^5.1.2",
+    "webpack-cli": "^3.3.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "npm run build-watch & npm run start-server",
     "start-server": "nodemon main.js -e html,js,css --ignore public",
+    "build": "webpack --config webpack.config.js",
     "build-watch": "webpack -w",
     "start": "echo 'Running server for production - developers, use npm run start:dev for development' && node main",
     "seed": "node seed.js"
