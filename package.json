@@ -1,0 +1,34 @@
+{
+  "name": "estrategy",
+  "version": "1.0.0",
+  "description": "code challenge for employment application",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.4",
+    "volleyball": "^1.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "npm run build-watch & npm run start-server",
+    "start-server": "nodemon main.js -e html,js,css --ignore public",
+    "build-watch": "webpack -w",
+    "start": "echo 'Running server for production - developers, use npm run start:dev for development' && node main",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LE0616/eStrategy.git"
+  },
+  "author": "LEMcNamara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LE0616/eStrategy/issues"
+  },
+  "homepage": "https://github.com/LE0616/eStrategy#readme"
+}
