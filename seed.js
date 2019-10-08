@@ -14,27 +14,27 @@ const courses = [{
 }];
 
 const tests = [{
-  course_id: 1,
+  courseId: 1,
   name: 'The Agile Manifesto',
   num_of_questions: 20,
   duration: 20.0
 }, {
-  course_id: 1,
+  courseId: 1,
   name: "12 Principles",
   num_of_questions: 24,
   duration: 20.0
 }, {
-  course_id: 1,
+  courseId: 1,
   name: "Key Concepts",
   num_of_questions: 10,
   duration: 10.0
 }, {
-  course_id: 2,
-  name: "W3C/WAI",
+  courseId: 2,
+  name: "W3C WAI",
   num_of_questions: 50,
   duration: 60.0
 }, {
-  course_id: 2,
+  courseId: 2,
   name: "Why Make It Accessible",
   num_of_questions: 20,
   duration: 20.0
@@ -51,6 +51,7 @@ const main = () => {
   db.sync({force: true})
     .then(() => {
       console.log(green('Seeding the db...'));
+      return seed();
     })
     .catch(err => {
       console.error(red('Something went wrong!'))
@@ -61,3 +62,5 @@ const main = () => {
       return null;
     })
 }
+
+main();

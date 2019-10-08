@@ -3,7 +3,7 @@ const db = require('./database')
 
 const Test = db.define('test', {
 
-  course_id: {
+  courseId: {
     type: Sequelize.INTEGER
   },
   name: {
