@@ -2,17 +2,19 @@ import React from 'react'
 import {Route, Switch, Match} from 'react-router-dom'
 
 //Components
-import CourseCatalog from './CourseCatalog'
 import Navbar from './Navbar'
+import CourseCatalog from './CourseCatalog'
 import Courses from './Courses'
 import Tests from './Tests'
+
 
 const Root = () => {
   return (
 
     <div>
       <header>
-        <h1>If you can see me, the root is rendering.</h1>
+        {/* <h1>If you can see me, the root is rendering.</h1> */}
+        {/* <Navbar /> */}
       </header>
       <main>
         <Switch>
@@ -25,7 +27,8 @@ const Root = () => {
         </Switch>
       </main>
       <footer>
-        <h3>by Lauren (LE) McNamara</h3>
+        <h3>by: Lauren (LE) McNamara</h3>
+        <p>for: eStrategy, Oct 9, 2019</p>
       </footer>
     </div>
   )

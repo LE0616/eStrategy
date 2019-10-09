@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CourseCatalog; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
- // import Courses from '/Courses'
+ //
 
 class CourseCatalog extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor() {
@@ -146,14 +146,72 @@ class CourseCatalog extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Compone
           "num_of_questions": 20,
           "duration": "20"
         }]
+      }],
+      tests: [{
+        "id": 1,
+        "courseId": 1,
+        "name": "The Agile Manifesto",
+        "num_of_questions": 20,
+        "duration": "20"
+      }, {
+        "id": 2,
+        "courseId": 1,
+        "name": "12 Principles",
+        "num_of_questions": 24,
+        "duration": "20"
+      }, {
+        "id": 3,
+        "courseId": 1,
+        "name": "Key Concepts",
+        "num_of_questions": 10,
+        "duration": "10"
+      }, {
+        "id": 4,
+        "courseId": 2,
+        "name": "W3C WAI",
+        "num_of_questions": 50,
+        "duration": "60"
+      }, {
+        "id": 5,
+        "courseId": 2,
+        "name": "Why Make It Accessible",
+        "num_of_questions": 20,
+        "duration": "20"
       }]
     };
   }
 
   render() {
+    const courses = this.state.courses;
+    const tests = this.state.tests;
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Course Catalog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "courses"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.state.courses[0].name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.state.courses[1].name))));
+      className: "page_description"
+    }, "The Course Catalog is published before advising and registration begin for each semester and summer session. It lists each class being offered, its description, the domain at which it can be accessed, test topics for the term, and its unique number\u2014which students must know in order to register."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "courses_grid"
+    }, courses.map(course => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: course.id,
+      id: "individual_course"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "course_id"
+    }, `${course.id}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "course_name"
+    }, `${course.name}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "course_domain"
+    }, `${course.domain}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "course_description"
+    }, `${course.description}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "course_tests_grid"
+    }, tests.map(test => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "individual_test"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "test_id"
+    }, `${test.id}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "test_name"
+    }, `${test.name}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "test_q_num"
+    }, `${test.num_of_questions}`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "test_duration"
+    }, `${test.duration}`))))))));
   }
 
 }
@@ -205,9 +263,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _CourseCatalog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CourseCatalog */ "./app/components/CourseCatalog.js");
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navbar */ "./app/components/Navbar.js");
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Navbar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./app/components/Navbar.js");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Navbar__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _CourseCatalog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CourseCatalog */ "./app/components/CourseCatalog.js");
 /* harmony import */ var _Courses__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Courses */ "./app/components/Courses.js");
 /* harmony import */ var _Courses__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Courses__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Tests__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Tests */ "./app/components/Tests.js");
@@ -221,7 +279,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Root = () => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "If you can see me, the root is rendering.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/courses",
     component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Courses__WEBPACK_IMPORTED_MODULE_4___default.a, routeProps)
@@ -231,8 +289,8 @@ const Root = () => {
     component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tests__WEBPACK_IMPORTED_MODULE_5___default.a, routeProps)
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
-    component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CourseCatalog__WEBPACK_IMPORTED_MODULE_2__["default"], routeProps)
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "by Lauren (LE) McNamara")));
+    component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CourseCatalog__WEBPACK_IMPORTED_MODULE_3__["default"], routeProps)
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "by: Lauren (LE) McNamara"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "for: eStrategy, Oct 9, 2019")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Root);
