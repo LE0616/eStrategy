@@ -1,7 +1,8 @@
 import React from 'react'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Match} from 'react-router-dom'
 
 //Components
+import CourseCatalog from './CourseCatalog'
 import Navbar from './Navbar'
 import Courses from './Courses'
 import Tests from './Tests'
@@ -15,9 +16,11 @@ const Root = () => {
       </header>
       <main>
         <Switch>
-          <Route exact path={'/courses'} render={<Courses />} />
+          <Route exact path='/courses' component={(routeProps) => <Courses {...routeProps} />} />
 
-          <Route exact path={'/'} render={<Courses />} />
+          <Route exact path='/tests' component={(routeProps) => <Tests {...routeProps} />} />
+
+          <Route path='/' component={(routeProps) => <CourseCatalog {...routeProps} />} />
 
         </Switch>
       </main>

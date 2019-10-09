@@ -86,6 +86,80 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/components/CourseCatalog.js":
+/*!*****************************************!*\
+  !*** ./app/components/CourseCatalog.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CourseCatalog; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+ // import Courses from '/Courses'
+
+class CourseCatalog extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor() {
+    super();
+    this.state = {
+      courses: [{
+        "id": 1,
+        "name": "Agile 101",
+        "description": "Agile Development is a set of methods and practices where solutions evolve through collaboration between self-organizing, cross-functional teams. Agile 101 provides a detailed introduction.",
+        "domain": "https://www.agilealliance.org/agile101/",
+        "tests": [{
+          "id": 1,
+          "courseId": 1,
+          "name": "The Agile Manifesto",
+          "num_of_questions": 20,
+          "duration": "20"
+        }, {
+          "id": 2,
+          "courseId": 1,
+          "name": "12 Principles",
+          "num_of_questions": 24,
+          "duration": "20"
+        }, {
+          "id": 3,
+          "courseId": 1,
+          "name": "Key Concepts",
+          "num_of_questions": 10,
+          "duration": "10"
+        }]
+      }, {
+        "id": 2,
+        "name": "Writing Accessible Code",
+        "description": "People with disabilities often use assistive technologies and/or adaptive strategies to browse and interact with web sites and applications. Following global accessibility coding standards allows web professionals to deliver the same information and interaction to people with disabilities as to any other user. This is design that is “accessible” to all. When inclusive design practices are not followed, many people have difficulty or are unable to access the content and function of web sites. These are “inaccessible” experiences.",
+        "domain": "https://air-rallies.org/why-accessibility/",
+        "tests": [{
+          "id": 4,
+          "courseId": 2,
+          "name": "W3C WAI",
+          "num_of_questions": 50,
+          "duration": "60"
+        }, {
+          "id": 5,
+          "courseId": 2,
+          "name": "Why Make It Accessible",
+          "num_of_questions": 20,
+          "duration": "20"
+        }]
+      }]
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Course Catalog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "courses"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.state.courses[0].name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.state.courses[1].name))));
+  }
+
+}
+
+/***/ }),
+
 /***/ "./app/components/Courses.js":
 /*!***********************************!*\
   !*** ./app/components/Courses.js ***!
@@ -131,14 +205,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./app/components/Navbar.js");
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Navbar__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Courses__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Courses */ "./app/components/Courses.js");
-/* harmony import */ var _Courses__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Courses__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Tests__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Tests */ "./app/components/Tests.js");
-/* harmony import */ var _Tests__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Tests__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _CourseCatalog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CourseCatalog */ "./app/components/CourseCatalog.js");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navbar */ "./app/components/Navbar.js");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Navbar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Courses__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Courses */ "./app/components/Courses.js");
+/* harmony import */ var _Courses__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Courses__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Tests__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Tests */ "./app/components/Tests.js");
+/* harmony import */ var _Tests__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Tests__WEBPACK_IMPORTED_MODULE_5__);
 
  //Components
+
 
 
 
@@ -147,12 +223,15 @@ __webpack_require__.r(__webpack_exports__);
 const Root = () => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "If you can see me, the root is rendering.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: '/courses',
-    render: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Courses__WEBPACK_IMPORTED_MODULE_3___default.a, null)
+    path: "/courses",
+    component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Courses__WEBPACK_IMPORTED_MODULE_4___default.a, routeProps)
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: '/',
-    render: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Courses__WEBPACK_IMPORTED_MODULE_3___default.a, null)
+    path: "/tests",
+    component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tests__WEBPACK_IMPORTED_MODULE_5___default.a, routeProps)
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/",
+    component: routeProps => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CourseCatalog__WEBPACK_IMPORTED_MODULE_2__["default"], routeProps)
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "by Lauren (LE) McNamara")));
 };
 
@@ -41721,7 +41800,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
